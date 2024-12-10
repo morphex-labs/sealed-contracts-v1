@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
   const contract = await ethers.deployContract("SealedArtMarket", 
-    ["0xcA2A693A03b49bBc3A25AE7cCc3c36335235Eeac", "0xcA2A693A03b49bBc3A25AE7cCc3c36335235Eeac", "0xcA2A693A03b49bBc3A25AE7cCc3c36335235Eeac"]);
+    ["0xBc0f82d123b76E8Ff5E7e8E825762137b1574292", "0xB1dD2Fdb023cB54b7cc2a0f5D9e8d47a9F7723ce", "0xB1dD2Fdb023cB54b7cc2a0f5D9e8d47a9F7723ce"]);
 
   await contract.waitForDeployment();
 

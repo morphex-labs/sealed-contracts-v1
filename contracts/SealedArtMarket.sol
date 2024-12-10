@@ -41,7 +41,7 @@ contract SealedArtMarket is EIP712, Ownable {
     uint256 internal constant MAX_PROTOCOL_FEE = 0.1e18; // 10%
     uint256 public feeMultiplier;
     uint256 public forcedWithdrawDelay = 2 days;
-    RoyaltyEngine public constant royaltyEngine = RoyaltyEngine(0xBc40d21999b4BF120d330Ee3a2DE415287f626C9);
+    RoyaltyEngine public constant royaltyEngine = RoyaltyEngine(0xdb0b8257CDF984D25f3446252e86C1163BaBE3DD);
 
     enum AuctionState {
         NONE, // 0 -> doesnt exist, default state

@@ -1,4 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
+import "dotenv/config";
 import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
@@ -28,11 +29,17 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATEKEY!],
       gasMultiplier: 1.1,
     },
+    base: {
+      url: "https://base.llamarpc.com",
+      accounts: [process.env.PRIVATEKEY!],
+      gasMultiplier: 1.1,
+    }
   },
   etherscan: {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY ?? '',
-      avalancheFujiTestnet: process.env.ETHERSCAN_API_KEY ?? ''
+      avalancheFujiTestnet: process.env.ETHERSCAN_API_KEY ?? '',
+      base: process.env.ETHERSCAN_API_KEY ?? ''
     }
   }
 };
